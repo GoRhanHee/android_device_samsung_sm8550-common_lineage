@@ -21,6 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Audio
+$(call soong_config_set_bool,qtiaudio,pal_prefer_master_gain,true)
 $(call soong_config_set_bool,qtiaudio,pal_voip_sample_rate_calibration,true)
 
 PRODUCT_PACKAGES += \
